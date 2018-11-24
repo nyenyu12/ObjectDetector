@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Object Detector</string>
+    <string name="Initial_Text">0</string>
+    <string name="pic_button">Choose a picture</string>
+    <string name="random_heading">Here is a random number between 1 and %d</string>
+    <string name="imageDescriptor">The image you picked</string>
+    <string name="send_text">send pic</string>
+    <string name="image_desc_text">no image scanned</string>
+    <string name="port">Port number:</string>
+    <string name="IP">IP address</string>
+</resources>
