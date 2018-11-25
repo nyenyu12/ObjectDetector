@@ -1,13 +1,13 @@
+import os
 import torch
 import numpy as np
 import torch.nn.functional as F
 import pretrainedmodels as pre
 import pretrainedmodels.utils as utils
 
-#print (pre.model_names)
-#model=pre.pnasnet5large(1000)
-#print (model)
-#torch.save(model, "model.txt")
+if not os.path.exists(os.path.join(os.path.dirname(os.path.realpath(__file__)),"model.txt")):
+    model=pre.pnasnet5large(1000)
+    torch.save(model, "model.txt")
 
 classes=np.array(open('imagenet_classes.txt','r').read().split('\n'))
 
@@ -24,7 +24,9 @@ def prep_image(img,model,device):
     input_data = input_data.unsqueeze(0)
     return input_data.to(device)
 
-def classify(img,model):
+def classify(img,model=model,device=device):
+    img=prep_image(img,model,device)
+    print (type(img))
     output=model.forward(img)
     return classes[torch.argmax(output)]
 
