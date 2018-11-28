@@ -1,0 +1,69 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+android_code/.idea/**/workspace.xml
+android_code/.idea/**/tasks.xml
+android_code/.idea/**/usage.statistics.xml
+android_code/.idea/**/dictionaries
+android_code/.idea/**/shelf
+
+# Generated files
+android_code/.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+android_code/.idea/**/dataSources/
+android_code/.idea/**/dataSources.ids
+android_code/.idea/**/dataSources.local.xml
+android_code/.idea/**/sqlDataSources.xml
+android_code/.idea/**/dynamic.xml
+android_code/.idea/**/uiDesigner.xml
+android_code/.idea/**/dbnavigator.xml
+
+# Gradle
+android_code/.idea/**/gradle.xml
+android_code/.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# android_code/.idea/modules.xml
+# android_code/.idea/*.iml
+# android_code/.idea/modules
+
+# CMake
+android_code/cmake-build-*/
+
+# Mongo Explorer plugin
+android_code/.idea/**/mongoSettings.xml
+
+# File-based project format
+android_code/*.iws
+
+# IntelliJ
+android_code/out/
+
+# mpeltonen/sbt-idea plugin
+android_code/.idea_modules/
+
+# JIRA plugin
+android_code/atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+android_code/android_code/.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+android_code/com_crashlytics_export_strings.xml
+android_code/crashlytics.properties
+android_code/crashlytics-build.properties
+android_code/android_code/fabric.properties
+
+# Editor-based Rest Client
+android_code/.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+android_code/.idea/caches/build_file_checksums.ser
+
+# Actual model because its to big
+python_code/model.txt

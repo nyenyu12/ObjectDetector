@@ -26,7 +26,6 @@ def prep_image(img,model,device):
 
 def classify(img,model=model,device=device):
     img=prep_image(img,model,device)
-    print (type(img))
     output=model.forward(img)
     return classes[torch.argmax(output)]
 

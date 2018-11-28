@@ -7,6 +7,7 @@ from PIL import Image
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 app = Flask(__name__)
+app.secret_key=os.urandom(16)
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -15,21 +16,31 @@ def allowed_file(filename):
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
+        print ('hi')
         # check if the post request has the file part
-        if 'file' not in request.files:
+        if 'Image.jpg' not in request.files:
+            print ('No file part')
             flash('No file part')
             return redirect(request.url)
-        file = request.files['file']
+        file = request.files['Image.jpg']
+
         # if user does not select file, browser also
         # submit an empty part without filename
         if file.filename == '':
+            print ('No selected file')
             flash('No selected file')
             return redirect(request.url)
+
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            img=img = Image.open(request.files['file'].stream)
-            #return redirect(url_for('uploaded_file',filename=filename))
-            return classifier.classify(img)
+
+            try:
+                img = Image.open(request.files['Image.jpg'].stream)
+                return classifier.classify(img)
+
+            except Exception as e:
+                print (e)
+
 
     return '''
     <!doctype html>
